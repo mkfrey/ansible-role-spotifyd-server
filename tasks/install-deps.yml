@@ -1,0 +1,7 @@
+- name: "Install Build Dependencies"
+  become: yes
+  package:
+    name: "{{ spotifyd_dependencies }}"
+    state: present
+  tags:
+    - "install"

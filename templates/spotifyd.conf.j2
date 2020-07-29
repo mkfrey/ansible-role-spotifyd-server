@@ -1,0 +1,18 @@
+# Managed by Ansible
+
+[global]
+username = {{ spotifyd_username }}
+password = {{ spotifyd_password }}
+backend = {{ spotifyd_backend }}
+device = {{ spotifyd_device }}  # omit for macOS
+control = {{ spotifyd_control }}  # omit for macOS
+mixer = {{ spotifyd_mixer }}
+volume_controller = {{ spotifyd_volume_controller }}
+device_name = {{ spotifyd_device_name }}
+bitrate = {{ spotifyd_bitrate }}
+cache_path = {{ spotifyd_cache_directory }}
+no_audio_cache = false
+initial_volume = {{ spotifyd_initial_volume }}
+volume_normalisation = true
+normalisation_pregain = -10
+device_type = {{ spotifyd_device_type }}

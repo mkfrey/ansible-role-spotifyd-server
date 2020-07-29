@@ -1,0 +1,11 @@
+- name: "Source Distribution Specific Values"
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}_{{ ansible_distribution_major_version }}.yml"
+    - "{{ ansible_distribution }}.yml"
+    - "{{ ansible_os_family }}.yml"
+
+- include: install-deps.yml
+- include: user.yml
+- include: files.yml
+- include: install-cargo.yml

@@ -1,0 +1,7 @@
+- name: "Install Spotifyd using Cargo"
+  become: yes
+  command:
+    cmd: "cargo install spotifyd --locked{% if (spotifyd_compile_threads | int) > 0 %} -j {{ spotifyd_compile_threads }}{% endif %} --root {{ spotifyd_install_directory }}"
+  tags:
+    - "install"
+    - "compile"

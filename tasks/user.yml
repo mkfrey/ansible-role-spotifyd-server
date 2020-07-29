@@ -1,0 +1,12 @@
+- name: Add System User for Running Spotifyd
+  become: yes
+  user:
+    name: "{{ spotifyd_daemon_user }}"
+    comment: "spotifyd service account"
+    create_home: False
+    system: True
+    groups:
+      - audio
+    state: present
+  tags:
+    - "user"

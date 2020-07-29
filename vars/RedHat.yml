@@ -1,0 +1,7 @@
+spotifyd_dependencies:
+  - "rust"
+  - "cargo"
+  - "openssl-devel"
+  - "git"
+  - "alsa-lib-devel"
+  - "alsa-utils" # Not directly required, but pretty useful for alsa setup

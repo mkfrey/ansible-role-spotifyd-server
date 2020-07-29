@@ -1,0 +1,19 @@
+# Installation Settings
+spotifyd_install_directory: "/opt/spotifyd"
+spotifyd_config_directory: "/etc/spotifyd"
+spotifyd_cache_directory: "/opt/spotifyd/cache"
+spotifyd_compile_threads: 0
+spotifyd_daemon_user: "spotifyd"
+
+# Spotify Settings
+spotifyd_device_name: "spotifyd"
+spotifyd_device_type: "speaker"
+spotifyd_bitrate: 160
+spotifyd_initial_volume: 50
+
+# Alsa Settings
+spotifyd_backend: "alsa"
+spotifyd_volume_controller: "softvol"
+spotifyd_mixer: "PCM"
+spotifyd_control: "default"
+spotifyd_device: "default"

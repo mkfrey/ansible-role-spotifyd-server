@@ -1,0 +1,38 @@
+- name: "Create Config Directory"
+  become: yes
+  file:
+    path: "{{ spotifyd_config_directory }}"
+    state: directory
+    owner: "{{ spotifyd_daemon_user }}"
+    group: "{{ spotifyd_daemon_user }}"
+    mode: "0700"
+  tags:
+    - "config"
+
+- name: "Create Caching Directory"
+  become: yes
+  file:
+    path: "{{ spotifyd_cache_directory }}"
+    state: directory
+    owner: "{{ spotifyd_daemon_user }}"
+    group: "{{ spotifyd_daemon_user }}"
+  tags:
+    - "config"
+
+- name: "Deploy Spotifyd Configuration"
+  become: yes
+  template:
+      src: "spotifyd.conf.j2"
+      dest: "{{ spotifyd_config_directory }}/spotifyd.conf"
+      owner: "{{ spotifyd_daemon_user }}"
+      group: "{{ spotifyd_daemon_user }}"
+  tags:
+    - "config"
+
+- name: "Create Systemd Service File"
+  become: yes
+  template:
+    src: "spotifyd.service.j2"
+    dest: "/etc/systemd/system/spotifyd.service"
+  tags:
+    - "config"
