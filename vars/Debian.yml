@@ -1,0 +1,9 @@
+spotifyd_dependencies:
+  - "pkg-config"
+  - "rustc"
+  - "cargo"
+  - "libssl-dev"
+  - "git"
+  - "libasound2-dev"
+  - "alsa-base"
+  - "alsa-utils" # Not directly required, but pretty useful for alsa setup
