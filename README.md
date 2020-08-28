@@ -2,7 +2,8 @@
 Ansible role to install and configure spotifyd as a
 system-wide service.
 
-Currently only works on Fedora, tested on Raspberry Pi. Please
+Currently should work on RedHat and Debian based distributions,
+tested on Raspberry Pi with Fedora and Ubuntu. Please
 feel free to submit a PR to add other distros as well. Just
 creating a fitting file in `vars` should be enough.
 
@@ -16,7 +17,6 @@ creating a fitting file in `vars` should be enough.
 ## What this role (currently) doesn't
 - Support all configuration options provided by spotifyd
 - Install spotifyd on a per user base
-- Support Debian/Ubuntu/etc.
 - Enable and start the created systemd service
 
 ## Variables
